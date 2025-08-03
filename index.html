@@ -1,1 +1,43 @@
-<h1>Hello!</h1>
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>S&P 500 Stock Trends</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .scene {
+            display: none;
+        }
+        .active {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 20px;
+            align-items: start;
+        }
+        svg {
+            border: 1px solid #ccc;
+        }
+        #country-select {
+            margin: 10px 0;
+        }
+        .button-container {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
+</head>
