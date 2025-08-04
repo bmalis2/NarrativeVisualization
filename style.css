@@ -21,10 +21,6 @@
   font-weight: bold;
 }
 
-.scene:hover {
-  background: #d0d0d0;
-  cursor: pointer;
-}
 
 .annotation-note-title {
   font-size: 13px;
