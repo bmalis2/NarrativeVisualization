@@ -63,9 +63,6 @@ async function loadData() {
 
 //set up line chart:
 function drawChart(data) {
-  // const margin = { top: 20, right: 30, bottom: 40, left: 60 },
-  //   width = 800 - margin.left - margin.right,
-  //   height = 400 - margin.top - margin.bottom;
   const width = 800;
   const height = 400;
 
@@ -194,7 +191,7 @@ function drawChart(data) {
       dx: -60,
       dy: -40
     }
-  ].filter(Boolean); // ✅ removes any false/null values
+  ].filter(Boolean); // removes any false/null values
 
 
 
@@ -203,7 +200,6 @@ function drawChart(data) {
     .type(d3.annotationLabel)
     .annotations(annotations);
 
-  // Add annotations to the same <g> chart group (e.g. #chart-content or g)
   console.log(currentScene)
   if (explorationChartType != "bar" || currentScene != 4)
     svg.append("g")
