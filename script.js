@@ -132,6 +132,12 @@ function drawChart(data) {
     d.date.getDate() === 15
   );
 
+  const covid2020 = data.find(d =>
+    d.date.getFullYear() === 2020 &&
+    d.date.getMonth() === 3 &&
+    d.date.getDate() === 15
+  );
+
 
   const annotations = [
     blackTuesday && {
@@ -176,6 +182,17 @@ function drawChart(data) {
       y: y(crisis2008.close),
       dx: -15,
       dy: 40
+    },
+    covid2020 && {
+      note: {
+        title: "2020 COVID-19 Pandemic",
+        label: "Market fell due to global pandemic",
+        align: "middle"
+      },
+      x: x(covid2020.date),
+      y: y(covid2020.close),
+      dx: -60,
+      dy: -40
     }
   ].filter(Boolean); // ✅ removes any false/null values
 
