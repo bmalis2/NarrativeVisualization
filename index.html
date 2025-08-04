@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>S&P 500 Stock Trends</title>
@@ -12,10 +13,54 @@
       margin-top: 50px;
     }
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <h1>S&amp;P 500 Stock Trends Between 1927–2020</h1>
 
+  <!-- Martini Glass: Scenes-->
+  <div id="narrative">
+    <div class="scene" id="scene-0">Overall S&P 500 Stock Trend </div>
+    <div class="scene" id="scene-1">1. 1927-1945: Market Volatility and the Great Depression</div>
+    <div class="scene" id="scene-2">2. 1946-199: Post-WWII Boom and Long-term Growth</div>
+    <div class="scene" id="scene-3">3. 2000-2020: Dot-Com, Housing Crisis, Covid-19</div>
+    <div class="scene" id="scene-4">Other S&P Metrics: Explore Further</div>
+  </div>
+
+  <!-- Charts-->
+  <div id="chart-container">
+    <svg id="chart"></svg>
+    <div id="explore-controls" style="display: none;">
+      <button id="toggle-chart">Switch to Line Chart</button>
+      <div id="year-range-controls" style="display: none;">
+        <label for="start-year-slider">Start Year:</label>
+        <input type="range" id="start-year-slider" min="1927" max="2020" value="2000">
+
+        <label for="end-year-slider">End Year:</label>
+        <input type="range" id="end-year-slider" min="1927" max="2020" value="2020">
+
+        <p>Showing: <span id="range-display">2000–2020</span></p>
+      </div>
+      <p id="chart-description" style="margin-top: 10px;"></p>
+    </div>
+  </div>
+
+
+  <!-- Area to dig deeper & add controls/sliders/filters-->
+
+
+  <div id="button-container">
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+  </div>
+
+  <script src=https://d3js.org/d3.v7.min.js></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+  <script src="script.js"></script>
+
+
 </body>
+
 </html>
